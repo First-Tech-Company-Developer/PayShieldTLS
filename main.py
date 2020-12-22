@@ -12,7 +12,7 @@ ssl_sock = ssl.wrap_socket(hsmSocket,
                            ciphers="ECDHE-RSA-AES128-GCM-SHA256"
                            )
 
-HOST = 'hopdev.first-tech.net' #'hopdev.first-tech.net' #'hop.first-tech.net' #'129.151.32.241'
+HOST = 'host.example.net' # host da aplicação
 HOST_PORT = 443
 BUFFER_SIZE = 1024
 
