@@ -13,4 +13,5 @@ Siga o exemplo abaixo para a geração de um par de chaves.
     openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout server.key -out server.crt -subj "/C=BR/ST=Sao Paulo/L=Sao Paulo/O=ORGANIZAÇÃO_NAME/CN=HOSTNAME"
 </code>
 
+
 Após gerar o par de chaves execute a apliação alterando os valores no aquivo main.py
