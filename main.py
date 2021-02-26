@@ -19,16 +19,7 @@ COMMAND = '0000NO00'
 for item in range(N_TESTS):
     hsmSocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     # ssl_sock = hsmSocket
-    ssl_sock = ssl.wrap_socket(hsmSocket,
-                               keyfile="CERTIFICADO.key",
-                               certfile="CERTIFICADO.crt",
-                               server_side=False,
-                               ca_certs=None,
-                               cert_reqs=ssl.PROTOCOL_SSLv23,
-                               do_handshake_on_connect=True,
-                               suppress_ragged_eofs=True,
-                               ciphers="ECDHE-RSA-AES128-GCM-SHA256"
-                               )
+    ssl_sock = ssl.wrap_socket(hsmSocket)
     try:
         ssl_sock.connect((HOST, HOST_PORT))
         print "========================================================================================================"
